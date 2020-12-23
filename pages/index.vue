@@ -30,6 +30,7 @@
 
 <script>
   export default {
+    transition: "default",
     computed: {
       uniquePhotoUrl() {
         return `https://picsum.photos/seed/${this.$store.state.tenant.domain}/1080/720`;

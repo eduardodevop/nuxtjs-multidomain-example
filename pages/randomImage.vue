@@ -8,8 +8,8 @@
       <h1 class="text-2xl font-bold">NuxtJS Multiple Domain Detection</h1>
       <h2 class="text-xl"><b>Serving From:</b>&nbsp;{{$store.state.tenant.domain}}</h2>
       <h3 class="text-lg my-4">
-        Fixed image for the domain.
-        <nuxt-link to="/randomImage" class="font-bold text-blue-700 hover:text-blue-500">View Random Image.</nuxt-link>
+        Random Image.
+        <nuxt-link to="/" class="font-bold text-blue-700 hover:text-blue-500">View Domain Based Image.</nuxt-link>
       </h3>
       <img :src="uniquePhotoUrl" class="mx-auto rounded-2xl shadow">
     </div>
@@ -32,7 +32,7 @@
   export default {
     computed: {
       uniquePhotoUrl() {
-        return `https://picsum.photos/seed/${this.$store.state.tenant.domain}/1080/720`;
+        return `https://picsum.photos/1080/720`;
       }
     },
   }
